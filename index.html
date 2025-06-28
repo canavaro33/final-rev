@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Revinot/Revtaru</title>
+    <style>
+        :root {
+            --burgundy: #800020;
+            --light-burgundy: #a04060;
+            --gold: #d4af37;
+            --cream: #f5f5dc;
+            --dark-text: #333;
+        }
+        
+        body {
+            font-family: 'Playfair Display', serif;
+            background-color: var(--cream);
+            color: var(--dark-text);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 40px 0;
+            border-bottom: 1px solid var(--burgundy);
+            margin-bottom: 30px;
+        }
+        
+        h1 {
+            color: var(--burgundy);
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        h2 {
+            color: var(--burgundy);
+            border-bottom: 1px solid var(--gold);
+            padding-bottom: 10px;
+            margin-top: 40px;
+            font-size: 1.8rem;
+        }
+        
+        h3 {
+            color: var(--light-burgundy);
+            margin-top: 25px;
+        }
+        
+        .proposal {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+            position: relative;
+        }
+        
+        .proposal:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, var(--burgundy), var(--gold));
+        }
+        
+        .reasons-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .reason {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            border-left: 4px solid var(--burgundy);
+        }
+        
+        .top-section {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .top-item {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+        
+        .top-item h3 {
+            color: var(--burgundy);
+            margin-top: 0;
+        }
+        
+        .photo-placeholder {
+            width: 100%;
+            height: 150px;
+            background-color: #eee;
+            margin: 15px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-style: italic;
+            border-radius: 4px;
+        }
+        
+        .decision {
+            text-align: center;
+            margin: 50px 0;
+            padding: 30px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            margin: 10px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-yes {
+            background-color: var(--burgundy);
+            color: white;
+            border: 2px solid var(--burgundy);
+        }
+        
+        .btn-yes:hover {
+            background-color: var(--light-burgundy);
+            transform: scale(1.05);
+        }
+        
+        .btn-no {
+            background-color: transparent;
+            color: var(--burgundy);
+            border: 2px solid var(--burgundy);
+        }
+        
+        .btn-no:hover {
+            background-color: #f8f8f8;
+        }
+        
+        .signature {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.5rem;
+            color: var(--burgundy);
+            margin-top: 20px;
+        }
+        
+        .confetti {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            background-color: var(--gold);
+            opacity: 0;
+            z-index: 9999;
+            animation: confetti-fall 5s linear forwards;
+        }
+        
+        @keyframes confetti-fall {
+            0% {
+                transform: translateY(-100px) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .reasons-list {
+                grid-template-columns: 1fr;
+            }
+            
+            .top-section {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Khusus revinot aja plisss</h1>
+            <p>read it good good yeah</p>
+        </header>
+        
+        <div class="proposal">
+            <h2>I think this one is the most important for u to read sayang</h2>
+            <p>Hi revinot,</p>
+            <p>Today is 29th of June, the day I make a move for you. Yeah, I want you to be my gf. Before you say yes for the second time (because let's be honest, you were going to), I want you to read this first.</p>
+            
+            <p>As you know, I really really love you with all of my heart (cyailah) but for real. I love you. I wanna treat you as best as I can. And maybe you need to know this, but when I tell you about this, it doesn't mean you need to do something. It really doesn't.</p>
+            
+            <p>I just wanna tell you that I'm afraid I'm not enough for you, emotionally and materially. I just want to tell you that I will always try my best to build myself up. And now you're one of my motivations to get more knowledge and money. Right now I'm making progress to get money as much as I can.</p>
+            
+            <p>I'm afraid that maybe sometimes I can't take you to any place we want. But it doesn't mean I'm just afraid. I always think that I can do it and I have to do it. Just like I said, you are one of my motivations besides my family right now.</p>
+            
+            <p>So I am really looking forward to you. I ain't playin' no games. I love you and I will always try my best to make us better every day. I want you to be the person I can tell everything about.</p>
+            
+            <p>After all, I just wanna make sure that you know my intentions toward you. I'm really looking forward to you. I love you revinot.</p>
+            
+            <p>So now you have your choice to say yes or no </p>
+            
+            <div class="helvetica">Tapi nanti dibawah<br>kamu baca aja dulu ini heheheeheh</div>
+        </div>
+        
+        <h2>10 Reasons why I LOVE U SOMACCCCCCCCC</h2>
+        <div class="reasons-list">
+            <div class="reason">
+                <h3>1. YOU ARE PRETTY ASF</h3>
+                <p>You're always beautiful no matter if it's with makeup or not. hihihi?</p>
+                <img src="cantikk.jpg.png" alt="Foto Kita" style="width:100%; border-radius:4px;">
+            </div>
+            <div class="reason">
+                <h3>2. Kamu baikkkk</h3>
+                <p>You're kind to people who deserve your kindness. It means you're worth to love .</p>
+                <img src="baik.jpg" alt="Foto Kita" style="width:100%; border-radius:4px;">
+            </div>
+            <div class="reason">
+                <h3>3. YOUR SMILEEEEEE</h3>
+                <p>You have a beautiful SMILEEE that can make me love you even harder. emg kamu curang.</p>
+                 <img src="smile.jpg" alt="Foto Kita" style="width:100%; border-radius:4px;">
+            </div>
+            <div class="reason">
+                <h3>4. The way you talk</h3>
+                <p>I found it really cute and mature at the same timee.</p>
+                 <img src="talk.jpg" alt="Foto Kita" style="width:100%; border-radius:4px;">
+            </div>
+            <div class="reason">
+                <h3>5. KAMU PINTER</h3>
+                <p>You're smart. You have a very great way of thinking. It's intimidating but also very attractive.</p>
+                 <img src="pinter.jpg" alt="Foto Kita" style="width:100%; border-radius:4px;">
+            </div>
+            <div class="reason">
+                <h3>6. Pure Heart</h3>
+                <p>Kayak,i know and i hope u always be like this,ure really worth to love sayang.</p>
+                 <img src="pure heart.jpg" alt="Foto Kita" style="width:100%; border-radius:4px;">
+            </div>
+            <div class="reason">
+                <h3>7. MOODBOOSTER AKU</h3>
+                <p>Your energy really boosts my mood.</p>
+                 <img src="moodbooster.jpg" alt="Foto Kita" style="width:100%; border-radius:4px;">
+            </div>
+            <div class="reason">
+                <h3>8. Your eyes</h3>
+                <p>ur eyes when you look at me. I'm pretty sure you're casting spells but I choose to be quiet.</p>
+                 <img src="revinotcantik.jpg" alt="Foto Kita" style="width:100%; border-radius:4px;">
+            </div>
+            <div class="reason">
+                <h3>9. My comfort person</h3>
+                <p>You can calm me down when I'm upset or feel not safe.</p>
+                 <img src="comfort.jpg.png" alt="Foto Kita" style="width:100%; border-radius:4px;">
+            </div>
+            <div class="reason">
+                <h3>10. Kamu selalu berusaha bersyukur</h3>
+                <p>You're the type of person who tries to stay grateful.</p>
+                 <img src="bersyukur.jpg" alt="Foto Kita" style="width:100%; border-radius:4px;">
+            </div>
+        </div>
+        
+        <h2>Top 3 dates versi aku</h2>
+        <div class="top-section">
+            <div class="top-item">
+                <h3>3. OUR FIRST DATE"</h3>
+                <p>Our first date was SO fun we couldn't stop sharing our stories. Strolling around SCBD and you introduced my favorite place to eat with you - yakk nasi peda Pelangi HIHIH LOVE U.</p>
+                <img src="firstdate.jpg" alt="Foto Kita" style="width:100%; border-radius:4px;">
+            </div>
+            <div class="top-item">
+                <h3>2. Unexpected JOGGING</h3>
+                <p>YKWIM like it was so unexpected kita naik motor ke GBK and I will always remember the way you calmed me down because of popbox hffttt (you shared your earphone) and then aku gendong kamu. Itu seru banget!</p>
+                <img src="jogging.jpg" alt="Foto Kita" style="width:100%; border-radius:4px;">
+            </div>
+            <div class="top-item">
+                <h3>1. Last Dance</h3>
+                <p>Because of the time quality! Kita almost a day together. Walaupun at first banyak banget lika likunya. We had a really great party at that night, and then winglok, and then kita cari tempat tidur karena kamu gajadi nginep di temen kamu so we went to parkiran apartemen Rasuna Said.</p>
+               <img src="lastdance.jpg" alt="Foto Kita" style="width:100%; border-radius:4px;">
+            </div>
+        </div>
+        
+        <h2>3 songs that reminds me of uuuu</h2>
+        <div class="top-section">
+            <div class="top-item">
+                <h3>3. For You - Kali Uchis</h3>
+                <p>Every time I hear this song I feel like "it's so you".</p>
+                <p style="margin-top: 10px;">
+        <a href="https://open.spotify.com/track/6L1xZIyw9U8kICunpmDvq4?si=4a764bfd0ffa4cf1" 
+           target="_blank" 
+           style="color: var(--burgundy); text-decoration: none; font-weight: bold;">
+           🎵 Yak ini lagunya pencet aja tulisannya
+        </a>
+    </p>
+            </div>
+            <div class="top-item">
+                <h3>2. Ssst - Sore</h3>
+                <p>IDK this song really hit me hard. I always remember about you when I listen to this song. It's like our secret soundtrack.</p>
+    <p style="margin-top: 10px;">
+        <a href="http://bit.ly/4nnUXZ1" 
+           target="_blank" 
+           style="color: var(--burgundy); text-decoration: none; font-weight: bold;">
+           🎵 ini jugaaaaa
+        </a>
+    </p>
+            </div>
+            <div class="top-item">
+                <h3>1. I Wish You Love - Rod Stewart</h3>
+                <p>It's like, melekat banget di aku. Karena aku pake lagu ini di eskrim ikutin feeds IG kamu (which is long time ago before we know really well each other).</p>
+                <p style="margin-top: 10px;">
+        <a href="https://open.spotify.com/track/1YOOU3dL75UtRiOFexuXkw?si=90e623e8c0624b93" 
+           target="_blank" 
+           style="color: var(--burgundy); text-decoration: none; font-weight: bold;">
+           🎵 yak nih 
+        </a>
+    </p>
+            </div>
+            <div class="top-item">
+                <h3>4. Jennifer</h3>
+                <a href="https://open.spotify.com/track/5ZJ9wxMqAhIOekYLmukc2L?si=426f5f3bc79146d7" 
+           target="_blank" 
+           style="color: var(--burgundy); text-decoration: none; font-weight: bold;"> 
+            🎵 jenniferrrr anjas
+                <p>HAHHHAHAHAHAAHAAAAHA</p>
+                <img src="jennifer.jpg" alt="Foto Kita" style="width: 80%; border-radius:4px;">
+            </div>
+            <p style="margin-top: 10px;">
+        </a>
+    </p>
+        </div>
+        
+        <h2>Top 3 Places versii akuuuu</h2>
+        <div class="top-section">
+            <div class="top-item">
+                <h3>3. Depan Masjid Gor Bulungan</h3>
+                <p>IYKYK. The place where... things happened. YKIM HAHAHA idc fuck it.</p>
+                <img src="bulungan.jpg" alt="Foto Kita" style="width:100%; border-radius:4px;">
+            </div>
+            <div class="top-item">
+                <h3>2. Jl Bukit Duri Selatan No 88A</h3>
+                <p>Because it's your house HEHE. Also where I probably stood awkwardly a few times.</p>
+                <img src="bukdursel.jpg" alt="Foto Kita" style="width:100%; border-radius:4px;">
+            </div>
+            <div class="top-item">
+                <h3>1. Nasi Peda Pelangi & The Burbs</h3>
+                <p>Our spot. The place where I realized food tastes better when ure there.</p>
+                <img src="peda.jpg.png" alt="Foto Kita" style="width:100%; border-radius:4px;">
+            </div>
+        </div>
+        
+        <h2>Top 3 Things that reminds me of u</h2>
+        <div class="top-section">
+            <div class="top-item">
+                <h3>3. Jedai kamuuu</h3>
+                <p>GATAU AKU INGET KM PASTI KALO LIAT JEDAI KM YANG KETINGGALAN (iyalah orang punya kamu) </p>
+            </div>
+            <div class="top-item">
+                <h3>2. RELX Lemon Ice Tea</h3>
+                <p>hehehe thats the first thing that u gave it to me makasi yaaaa.</p>
+            </div>
+            <div class="top-item">
+                <h3>1. Earphones</h3>
+                <p>KEK YAKK kamu bawa tuh earphone kemana-mana bener bener saingan aku itu shit </p>
+            </div>
+        </div>
+        
+        <div class="decision">
+            <h2>Soooooooo.......</h2>
+            <p>Rate dulu njir ini presentasinya from a scale 1 to 10 berapaaa.</p>
+            <p>do u really want to be my gf?????</p>
+            
+            <div>
+                <a href="#" class="btn btn-yes" id="yes-btn">mau hihihihihi</a>
+                <a href="#" class="btn btn-no" id="no-btn">ga males kamu aneh serem lagi stalker penguntit goblokkkkkk</a>
+            </div>
+            
+            <div id="response" style="margin-top: 20px; font-weight: bold;"></div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('yes-btn').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.getElementById('response').innerHTML = "ANJAYYYY LETSGOOO VAMOSSSSSSS";
+            createConfetti();
+        });
+        
+        document.getElementById('no-btn').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.getElementById('response').innerHTML = "after all this time jir? okaaiiii.";
+        });
+        
+        function createConfetti() {
+            const colors = ['#800020', '#d4af37', '#a04060', '#f5f5dc'];
+            
+            for (let i = 0; i < 100; i++) {
+                const confetti = document.createElement('div');
+                confetti.className = 'confetti';
+                confetti.style.left = Math.random() * 100 + 'vw';
+                confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                confetti.style.width = Math.random() * 10 + 5 + 'px';
+                confetti.style.height = Math.random() * 10 + 5 + 'px';
+                confetti.style.animationDuration = Math.random() * 3 + 2 + 's';
+                document.body.appendChild(confetti);
+                
+                setTimeout(() => {
+                    confetti.remove();
+                }, 5000);
+            }
+        }
+    </script>
+</body>
+</html>
